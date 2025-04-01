@@ -1,27 +1,38 @@
 .header {
-    border-radius: 10px;
-    margin: 10px;
-    background-color: rgba(100, 100, 100, 0.8);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    z-index: 100;
+    background-color: #f0f0f0; /* Hintergrundfarbe für den Header */
+    text-align: center; /* Zentriert den Inhalt horizontal */
+    position: relative; /* Wichtig für die absolute Positionierung des Textes */
+    padding: 10;
+    width: 100%;
 }
 
 .header_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0;
 }
 
-.header_txt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 10px;
+.header_image_container {
+    padding: 10px;
+}
+
+.header_image_container img {
+    display: block; /* Verhindert zusätzlichen Leerraum unter dem Bild */
+    border-radius: 0; /* Entferne die abgerundeten Ecken */
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.header_image_container h1 {
+    position: absolute; /* Text wird absolut positioniert */
+    top: 50%; /* Text wird vertikal zentriert */
+    left: 50%; /* Text wird horizontal zentriert */
+    transform: translate(-50%, -50%); /* Zentriert den Text genau */
+    color: white; /* Textfarbe */
+    font-size: 3em; /* Textgröße */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Schatten für bessere Lesbarkeit */
+    text-align: center;
+    margin: auto;
 }
 
 .header_content h1 {
@@ -29,14 +40,6 @@
     padding: 10px;
     border-radius: 5px;
 }
-
-.header_content img {
-    height: 150px;
-    box-shadow: 10px 10px 5px #888888;
-    margin-top: 10px;
-    /* Füge etwas Abstand zwischen Text und Bild hinzu */
-}
-
 
 .content_wrapper {
     gap: 2px;
