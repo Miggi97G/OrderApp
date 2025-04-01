@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestellApp</title>
+    <script src="./script/template.js"></script>
+    <script src="./script.js"></script>
+    <script src="./script/localstorage.js"></script>
+
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body onload="init()">
+    <div class="header">
+        <div class="header_content">
+            <img src="./assets/img/pizza_margheritta.jpeg" alt="">
+            <div class="header_txt">
+                <h1>BestellApp</h1>
+            </div>
+            <h2>Hauptgerichte</h2>
+        </div>
+    </div>
+    <div class="content_wrapper">
+        <section class="contents">
+            <div class="content">
+                <div class="menu" id="menu">
+                    <ul id="pizzaMenu">
+
+                    </ul>
+                    <ul id="pastaMenu">
+
+                    </ul>
+                </div>
+
+        </section>
+        <section class="basket_wrapper">
+            <div class="basket_content">
+                <h2>Warenkorb</h2>
+                <ul id="basketContent"></ul>
+
+                <div id="totalPrice" class="total_price">
+                    
+                </div>
+                <div id="clearBasket" class="clear_basket">
+                    <button onclick="clearBasket()">Warenkorb leeren</button>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer></footer>
+
+</body>
+
+</html>
