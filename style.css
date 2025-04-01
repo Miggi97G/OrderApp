@@ -1,7 +1,7 @@
 .header {
-    background-color: #f0f0f0; /* Hintergrundfarbe für den Header */
-    text-align: center; /* Zentriert den Inhalt horizontal */
-    position: relative; /* Wichtig für die absolute Positionierung des Textes */
+    background-color: #f0f0f0;
+    text-align: center;
+    position: relative;
     padding: 10;
     width: 100%;
 }
@@ -15,8 +15,8 @@
 }
 
 .header_image_container img {
-    display: block; /* Verhindert zusätzlichen Leerraum unter dem Bild */
-    border-radius: 0; /* Entferne die abgerundeten Ecken */
+    display: block;
+    border-radius: 0;
     object-fit: cover;
     height: 300px;
     width: 100%;
@@ -24,13 +24,13 @@
 }
 
 .header_image_container h1 {
-    position: absolute; /* Text wird absolut positioniert */
-    top: 50%; /* Text wird vertikal zentriert */
-    left: 50%; /* Text wird horizontal zentriert */
-    transform: translate(-50%, -50%); /* Zentriert den Text genau */
-    color: white; /* Textfarbe */
-    font-size: 3em; /* Textgröße */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Schatten für bessere Lesbarkeit */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
     margin: auto;
 }
@@ -76,10 +76,7 @@
     width: 100%;
 }
 
-
-.menu {
-    
-}
+.menu {}
 
 #basket {
     color: #555;
@@ -96,7 +93,7 @@
 
 #basketContent {
     padding: 0;
-    
+
 }
 
 #basketContent li {
@@ -160,20 +157,20 @@ section div p {
     position: fixed;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%); /* Zentriert den Button horizontal */
-    background-color: #4CAF50; /* Beispiel-Farbe */
+    transform: translateX(-50%);
+    background-color: #4CAF50;
     color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
-    display: none; /* Standardmäßig ausgeblendet */
+    z-index: 1000;
+    display: none;
 }
 
 /* Footer */
 footer {
-    background-color: rgba(100, 100, 100, 0.8); /* Grauer Hintergrund */
+    background-color: rgba(100, 100, 100, 0.8);
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -222,7 +219,7 @@ footer {
 
 /* Styling für den Bestellen-Button */
 #orderButton {
-    background-color: #4CAF50; /* Beispiel-Farbe */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -231,11 +228,16 @@ footer {
     margin-top: 10px;
 }
 
+#basket.show {
+    display: block;
+}
+
 /*Mobile Ansicht*/
 @media (max-width: 600px) {
-    *{
+    * {
         scrollbar-width: none;
     }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -243,51 +245,45 @@ footer {
 
     .content_wrapper {
         flex-direction: column;
-        /* Stapelt die Inhalte untereinander */
     }
 
     .contents,
     .basket_wrapper {
         width: 100%;
-        /* Nimmt die volle Breite ein */
         border-radius: 0;
-        /* Keine abgerundeten Ecken */
     }
 
     section {
         display: contents;
     }
 
-    .content{
+    .content {
         flex-direction: row;
-}
+    }
 
-.menu {
-    width: 100%;
-}
+    .menu {
+        width: 100%;
+    }
 
-#showBasketButton {
-    display: block; 
-}
+    #showBasketButton {
+        display: block;
+    }
 
-#basket{
-    margin: auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Zentriert das Pop-up */
-    background-color: rgba(255, 255, 255, 0.95); /* Heller Hintergrund */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    z-index: 1001; /* Noch höherer z-index */
-    display: none; /* Standardmäßig ausgeblendet */
-    width: 90%; /* Nimmt 90% der Bildschirmbreite ein */
-    max-width: 400px; /* Maximale Breite */
-    max-height: 80vh; /* Maximale Höhe */
-    overflow-y: auto; /* Scrollbar, wenn der Inhalt zu groß ist */
-}
-}
-#basket.show{
-    display: block;
+    #basket {
+        margin: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        z-index: 1001;
+        display: none;
+        width: 90%;
+        max-width: 400px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
 }

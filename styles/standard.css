@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
-    
 }
 
 body {
     max-width: 1920px;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Heller grauer Hintergrund */
-    color: #333; /* Dunkelgraue Textfarbe */
+    background-color: #f0f0f0;
+    /* Heller grauer Hintergrund */
+    color: #333;
+    /* Dunkelgraue Textfarbe */
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,12 +19,11 @@ body {
 img {
     border-radius: 10px;
     width: 100%;
-    
     object-fit: cover;
 }
 
 ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     gap: 10px;
 }
@@ -36,7 +36,7 @@ li {
 }
 
 button {
-    background-color: rgba(100, 100, 100, 0.8); /* Grauer Button */
+    background-color: rgba(100, 100, 100, 0.8);
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -46,7 +46,5 @@ button {
 }
 
 button:hover {
-    background-color: rgba(80, 80, 80, 0.9); /* Etwas dunkler beim Hover */
+    background-color: rgba(80, 80, 80, 0.9);
 }
-
-
