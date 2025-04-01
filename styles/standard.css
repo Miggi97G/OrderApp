@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    
 }
 
 body {
@@ -9,7 +10,7 @@ body {
     /* Heller grauer Hintergrund */
     color: #333;
     /* Dunkelgraue Textfarbe */
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: column;

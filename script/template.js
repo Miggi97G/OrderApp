@@ -11,9 +11,9 @@ let myPasta = [
 ];
 
 let myDesert = [
-    {name: "Tiramisu", description: "Kaffee, Mascarpone, Löffelbiskuit", price: 6.50},
-    {name: "Panna Cotta", description: "Sahne, Zucker, Gelatine", price: 5.50},
-    {name: "Tartufo", description: "Schokoladeneis, Nüsse", price: 7.00},
+    { name: "Tiramisu", description: "Kaffee, Mascarpone, Löffelbiskuit", price: 6.50 },
+    { name: "Panna Cotta", description: "Sahne, Zucker, Gelatine", price: 5.50 },
+    { name: "Tartufo", description: "Schokoladeneis, Nüsse", price: 7.00 },
 ];
 
 const pizza = document.getElementById("pizzaMenu");
