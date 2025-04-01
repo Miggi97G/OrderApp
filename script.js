@@ -4,6 +4,7 @@ function init() {
     loadFromLocalStorage();
     renderPizza();
     renderPasta();
+    renderDesert();
     renderBasket();
 }
 
@@ -84,6 +85,14 @@ function toggleBasket() {
     basketSection.classList.toggle('show');
 }
 
-
+function placeOrder() {
+    clearBasket();
+    const orderMessage = document.getElementById('orderMessage');
+    orderMessage.textContent = "Vielen Dank für deine Bestellung!"; 
+    orderMessage.classList.remove('hidden'); 
+    setTimeout(() => {
+        orderMessage.classList.add('hidden');
+    }, 3000);
+}
 
 

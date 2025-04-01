@@ -10,8 +10,15 @@ let myPasta = [
     { name: "Aglio e Olio", description: "Knoblauch, Öl, Peperoncino", price: 9.50 },
 ];
 
+let myDesert = [
+    {name: "Tiramisu", description: "Kaffee, Mascarpone, Löffelbiskuit", price: 6.50},
+    {name: "Panna Cotta", description: "Sahne, Zucker, Gelatine", price: 5.50},
+    {name: "Tartufo", description: "Schokoladeneis, Nüsse", price: 7.00},
+];
+
 const pizza = document.getElementById("pizzaMenu");
 const pasta = document.getElementById("pastaMenu");
+const desert = document.getElementById("desertMenu");
 
 function renderPizza() {
     const content = document.getElementById("menu");
@@ -47,4 +54,22 @@ function renderPasta() {
         pastaSection.appendChild(pastaItem);
     }
     content.appendChild(pastaSection);
+}
+
+function renderDesert() {
+    const content = document.getElementById("menu");
+    const desertSection = document.createElement("section");
+    desertSection.innerHTML = `<h2>Desert</h2> <img src="./assets/img/tiramisu.jpeg">`;
+
+    for (let i = 0; i < myDesert.length; i++) {
+        const desertItem = document.createElement("div");
+        desertItem.innerHTML = `<h3>${myDesert[i].name}</h3><p>${myDesert[i].description}</p>
+        <p>CHF ${myDesert[i].price.toFixed(2)}</p>`;
+        const addButton = document.createElement("button");
+        addButton.textContent = "Hinzufügen";
+        addButton.addEventListener("click", () => addBasket(myDesert[i]));
+        desertItem.appendChild(addButton);
+        desertSection.appendChild(desertItem);
+    }
+    content.appendChild(desertSection);
 }

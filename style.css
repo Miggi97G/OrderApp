@@ -168,8 +168,76 @@ section div p {
     display: none; /* Standardmäßig ausgeblendet */
 }
 
+/* Footer */
+footer {
+    background-color: rgba(100, 100, 100, 0.8); /* Grauer Hintergrund */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    margin: 10px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* Hidden Klasse */
+.hidden {
+    display: none;
+}
+
+/* Styling für den Bestellen-Button */
+#orderButton {
+    background-color: #4CAF50; /* Beispiel-Farbe */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 /*Mobile Ansicht*/
 @media (max-width: 600px) {
+    *{
+        scrollbar-width: none;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
     .content_wrapper {
         flex-direction: column;
         /* Stapelt die Inhalte untereinander */
@@ -190,16 +258,17 @@ section div p {
     .content{
         flex-direction: row;
 }
-* {
-    margin: revert;
-}
+
 .menu {
     width: 100%;
 }
+
 #showBasketButton {
     display: block; 
 }
+
 #basket{
+    margin: auto;
     position: fixed;
     top: 50%;
     left: 50%;

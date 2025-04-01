@@ -20,7 +20,7 @@
             <div class="header_txt">
                 <h1>BestellApp</h1>
             </div>
-            
+
         </div>
     </div>
     <div class="content_wrapper">
@@ -28,32 +28,54 @@
             <h2>Hauptgerichte</h2>
             <div class="content">
                 <div class="menu" id="menu">
-                    <ul id="pizzaMenu">
 
-                    </ul>
-                    <ul id="pastaMenu">
-
-                    </ul>
                 </div>
 
         </section>
+        
         <section id="basket" class="basket_wrapper">
             <div class="basket_content">
                 <h2>Warenkorb</h2>
+                <div id="orderMessage" class="hidden"></div>
                 <ul class="basketContent" id="basketContent"></ul>
 
                 <div id="totalPrice" class="total_price">
-                    
+
                 </div>
                 <div id="clearBasket" class="clear_basket">
                     <button onclick="clearBasket()">Warenkorb leeren</button>
-
+                    <button id="orderButton" onclick="placeOrder()">Bestellen</button>
                 </div>
             </div>
         </section>
+        
     </div>
     <button id="showBasketButton" onclick="toggleBasket()">Warenkorb</button>
-    <footer></footer>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>E-Mail: info@bestellapp.ch</p>
+                <p>Telefon: +41 123 456 78 90</p>
+            </div>
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <p>Mo-Fr: 10:00 - 22:00</p>
+                <p>Sa-So: 12:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>Folge uns</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> BestellApp. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
 
 </body>
 
