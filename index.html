@@ -11,7 +11,6 @@
 
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body onload="init()">
@@ -21,11 +20,12 @@
             <div class="header_txt">
                 <h1>BestellApp</h1>
             </div>
-            <h2>Hauptgerichte</h2>
+            
         </div>
     </div>
     <div class="content_wrapper">
         <section class="contents">
+            <h2>Hauptgerichte</h2>
             <div class="content">
                 <div class="menu" id="menu">
                     <ul id="pizzaMenu">
@@ -37,10 +37,10 @@
                 </div>
 
         </section>
-        <section class="basket_wrapper">
+        <section id="basket" class="basket_wrapper">
             <div class="basket_content">
                 <h2>Warenkorb</h2>
-                <ul id="basketContent"></ul>
+                <ul class="basketContent" id="basketContent"></ul>
 
                 <div id="totalPrice" class="total_price">
                     
@@ -52,6 +52,7 @@
             </div>
         </section>
     </div>
+    <button id="showBasketButton" onclick="toggleBasket()">Warenkorb</button>
     <footer></footer>
 
 </body>

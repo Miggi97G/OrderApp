@@ -1,11 +1,11 @@
 .header {
+    border-radius: 10px;
+    margin: 10px;
     background-color: rgba(100, 100, 100, 0.8);
-    /* Grauer, transparenter Header */
     color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Leichter Schatten */
     position: sticky;
     z-index: 100;
 }
@@ -58,9 +58,9 @@
     flex-grow: 1;
     padding: 16px;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Leichter Schatten */
+    margin: 10px;
 }
 
 .content {
@@ -80,7 +80,6 @@
 
 #basket {
     color: #555;
-    margin-top: 0;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
@@ -94,6 +93,7 @@
 
 #basketContent {
     padding: 0;
+    
 }
 
 #basketContent li {
@@ -153,6 +153,22 @@ section div p {
     margin: 5px 0;
 }
 
+#showBasketButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Zentriert den Button horizontal */
+    background-color: #4CAF50; /* Beispiel-Farbe */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Stellt sicher, dass der Button über anderen Elementen liegt */
+    display: none; /* Standardmäßig ausgeblendet */
+}
+
+/*Mobile Ansicht*/
 @media (max-width: 600px) {
     .content_wrapper {
         flex-direction: column;
@@ -177,4 +193,29 @@ section div p {
 * {
     margin: revert;
 }
+.menu {
+    width: 100%;
+}
+#showBasketButton {
+    display: block; 
+}
+#basket{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert das Pop-up */
+    background-color: rgba(255, 255, 255, 0.95); /* Heller Hintergrund */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1001; /* Noch höherer z-index */
+    display: none; /* Standardmäßig ausgeblendet */
+    width: 90%; /* Nimmt 90% der Bildschirmbreite ein */
+    max-width: 400px; /* Maximale Breite */
+    max-height: 80vh; /* Maximale Höhe */
+    overflow-y: auto; /* Scrollbar, wenn der Inhalt zu groß ist */
+}
+}
+#basket.show{
+    display: block;
 }

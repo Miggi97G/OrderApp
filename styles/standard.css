@@ -3,6 +3,7 @@
 }
 
 body {
+    max-width: 1920px;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Heller grauer Hintergrund */
     color: #333; /* Dunkelgraue Textfarbe */
@@ -47,12 +48,4 @@ button:hover {
     background-color: rgba(80, 80, 80, 0.9); /* Etwas dunkler beim Hover */
 }
 
-@media (max-width: 700px) {
-    .content_wrapper {
-        flex-direction: column; /* Stapelt die Inhalte untereinander */
-    }
-    .contents, .basket_wrapper {
-        width: 100%; /* Nimmt die volle Breite ein */
-        border-radius: 0; /* Keine abgerundeten Ecken */
-    }
-}
+
